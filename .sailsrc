@@ -1,0 +1,7 @@
+{
+    "generators" : {
+        "modules" : {
+            "frontend" : "sails-generate-reactjs"
+        }
+    }
+}

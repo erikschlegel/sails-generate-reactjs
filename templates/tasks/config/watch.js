@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 			files: ['assets/**/*', 'tasks/pipeline.js'],
 
 			// When assets are changed:
-			tasks: ['syncAssets' , 'linkAssets', 'babelBuild', 'browserify', 'less']
+			tasks: ['syncAssets' <%- linker ? ", 'linkAssets'" : '' %>, 'babelBuild', 'browserify']
 		}
 	});
 

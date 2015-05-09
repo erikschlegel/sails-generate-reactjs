@@ -10,12 +10,10 @@
  */
 module.exports = function(grunt) {
 
-  var version = grunt.file.readJSON('package.json').version;
-
 	grunt.config.set('cssmin', {
 		dist: {
 			src: ['.tmp/public/concat/production.css'],
-			dest: '.tmp/public/min/production.' + version + '.min.css'
+			dest: '.tmp/public/min/production.min.css'
 		}
 	});
 

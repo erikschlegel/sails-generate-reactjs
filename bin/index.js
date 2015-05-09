@@ -29,3 +29,4 @@ sailsgen(scope, function (err) {
 	// It worked.
 	console.log('Done.');
 });
+

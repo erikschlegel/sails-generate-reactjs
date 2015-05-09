@@ -1,7 +1,7 @@
 {
     "generators": {
         "modules" : {
-            "component" : "sails-generate-react-component"
+            "controller" : "sails-generate-controller-angular"
         }
     }
 }

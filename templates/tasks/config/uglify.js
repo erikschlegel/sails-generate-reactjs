@@ -11,12 +11,10 @@
  */
 module.exports = function(grunt) {
 
-  var version = grunt.file.readJSON('package.json').version;
-
 	grunt.config.set('uglify', {
 		dist: {
-			src: ['.tmp/public/browserify/debug.' + version + '.js'],
-			dest: '.tmp/public/min/production.' + version + '.min.js'
+			src: ['.tmp/public/concat/production.js'],
+			dest: '.tmp/public/min/production.min.js'
 		}
 	});
 
