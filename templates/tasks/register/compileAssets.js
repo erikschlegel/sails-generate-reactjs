@@ -4,8 +4,8 @@ module.exports = function (grunt) {
 		'jst:dev',
 		'less:dev',
 		'copy:dev',
-8		'babelBuild',
-9	    'browserify',
+		'babelBuild',
+        'browserify',
 		'coffee:dev'
 	]);
 };

@@ -12,6 +12,8 @@
  *
  */
 module.exports = function(grunt) {
+	var pipeline = require('../pipeline');
+	var version = grunt.file.readJSON('package.json').version;
 
 	grunt.config.set('sails-linker', {
 		devJs: {
@@ -22,9 +24,9 @@ module.exports = function(grunt) {
 				appRoot: '.tmp/public'
 			},
 			files: {
-				'.tmp/public/**/*.html': require('../pipeline').jsFilesToInject,
-				'views/**/*.html': require('../pipeline').jsFilesToInject,
-				'views/**/*.ejs': require('../pipeline').jsFilesToInject
+				'.tmp/public/**/*.html': ['.tmp/public/browserify/debug.' + version + '.js'],
+				'views/**/*.html': ['.tmp/public/browserify/debug.' + version + '.js'],
+				'views/**/*.ejs': ['.tmp/public/browserify/debug.' + version + '.js']
 			}
 		},
 
@@ -37,9 +39,9 @@ module.exports = function(grunt) {
 				relative: true
 			},
 			files: {
-				'.tmp/public/**/*.html': require('../pipeline').jsFilesToInject,
-				'views/**/*.html': require('../pipeline').jsFilesToInject,
-				'views/**/*.ejs': require('../pipeline').jsFilesToInject
+				'.tmp/public/**/*.html': ['.tmp/public/browserify/debug.' + version + '.js'],
+				'views/**/*.html': ['.tmp/public/browserify/debug.' + version + '.js'],
+				'views/**/*.ejs': ['.tmp/public/browserify/debug.' + version + '.js']
 			}
 		},
 
@@ -51,9 +53,9 @@ module.exports = function(grunt) {
 				appRoot: '.tmp/public'
 			},
 			files: {
-				'.tmp/public/**/*.html': ['.tmp/public/min/production.min.js'],
-				'views/**/*.html': ['.tmp/public/min/production.min.js'],
-				'views/**/*.ejs': ['.tmp/public/min/production.min.js']
+				'.tmp/public/**/*.html': ['.tmp/public/min/production.' + version + '.min.js'],
+				'views/**/*.html': ['.tmp/public/min/production.' + version + '.min.js'],
+				'views/**/*.ejs': ['.tmp/public/min/production.' + version + '.min.js']
 			}
 		},
 
@@ -66,9 +68,9 @@ module.exports = function(grunt) {
 				relative: true
 			},
 			files: {
-				'.tmp/public/**/*.html': ['.tmp/public/min/production.min.js'],
-				'views/**/*.html': ['.tmp/public/min/production.min.js'],
-				'views/**/*.ejs': ['.tmp/public/min/production.min.js']
+				'.tmp/public/**/*.html': ['.tmp/public/min/production.' + version + '.min.js'],
+				'views/**/*.html': ['.tmp/public/min/production.' + version + '.min.js'],
+				'views/**/*.ejs': ['.tmp/public/min/production.' + version + '.min.js']
 			}
 		},
 
@@ -111,9 +113,9 @@ module.exports = function(grunt) {
 				appRoot: '.tmp/public'
 			},
 			files: {
-				'.tmp/public/index.html': ['.tmp/public/min/production.min.css'],
-				'views/**/*.html': ['.tmp/public/min/production.min.css'],
-				'views/**/*.ejs': ['.tmp/public/min/production.min.css']
+				'.tmp/public/index.html': ['.tmp/public/min/production.' + version + '.min.css'],
+				'views/**/*.html': ['.tmp/public/min/production.' + version + '.min.css'],
+				'views/**/*.ejs': ['.tmp/public/min/production.' + version + '.min.css']
 			}
 		},
 
@@ -126,9 +128,9 @@ module.exports = function(grunt) {
 				relative: true
 			},
 			files: {
-				'.tmp/public/index.html': ['.tmp/public/min/production.min.css'],
-				'views/**/*.html': ['.tmp/public/min/production.min.css'],
-				'views/**/*.ejs': ['.tmp/public/min/production.min.css']
+				'.tmp/public/index.html': ['.tmp/public/min/production.' + version + '.min.css'],
+				'views/**/*.html': ['.tmp/public/min/production.' + version + '.min.css'],
+				'views/**/*.ejs': ['.tmp/public/min/production.' + version + '.min.css']
 			}
 		},
 
@@ -260,7 +262,19 @@ module.exports = function(grunt) {
 			files: {
 				'views/**/*.jade': ['.tmp/public/jst.js']
 			}
-		}
+		},
+		//Adding entry for ES6->ES5 Compilation
+		// es5ConvertedUnifiedJSIncludes: {
+		// 	options: {
+		// 		startTag: '//Converted ES6 scripts Start',
+		// 		endTag: '//Converted ES6 scripts End',
+		// 		relative: true,
+		// 		appRoot: 'build/'
+		// 	},
+		// 	files: {
+		// 	    'assets/js/build/**/*.js'	: ['assets/js/app.js']
+		// 	}
+		// }
 	});
 
 	grunt.loadNpmTasks('grunt-sails-linker');
