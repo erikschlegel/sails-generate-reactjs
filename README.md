@@ -21,27 +21,25 @@ You'll need to configure Sails to use this extension for creating new Sails site
 Certain generators are installed by default in Sails, but they can be overridden.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators.
 
 ##### On the command line
-1. Install this package globally via NPM, and extends off the SailsJS baseline generator
+*1. Install this package globally via NPM, and extends off the SailsJS baseline generator
 ```sh
 $ npm install -g sails-generate-reactjs
 ```
 
-2. This command will create your React Site
+*2. This command will create your React Site
 ```sh
 $ sails new <%-yourReactAppName> --force
 ```
 
-3. Install your app's node modules locally
+*3. Install your app's node modules locally
 ```sh
 $ cd <%-yourReactAppName>
 $ npm install
 ```
 
-4. fire up your web app
+*4. fire up your web app
 ```sh
 $ sails lift
-```
-
 ```
 
 ### Roadmap
