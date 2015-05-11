@@ -1,61 +1,53 @@
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
-# sails-generate-frontend-angular
+# sails-generate-reactjs
 
 
-A `frontend` AngularJS generator for use with the Sails command-line interface. This generator creates client side assets and files with grunt configurations and tasks that manage the front end assets for a sails project. To see more infomation about how it works look [here](./docs/overview.md).
+A `frontend` ReactJS generator for use with the Sails command-line interface. This bootstraps a full stack site using reactJS / Twitter Bootstrap, and can create/run a web platform in 3 commands. This repo comes bundled with Babel so ES6 components can be used across all browsers. This also ships with Browersify Grunt tasks to wrap all JS dependencies in a single JS file.
 
 
 ### Installation
 
 Certain generators are installed by default in Sails, but they can be overridden.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators.
 
-
-```sh
-$ npm install -g sails-generate-frontend-angular
-```
-
 #### Update your .sailsrc file
-If you want to use this when creating new sails projects, you will need to modify your `.sailsrc` file in your home directory, or the parent directory of where you are creating projects. 
+You'll need to configure Sails to use this extension for creating new Sails sites. This can be achieved by creating a file named `.sailsrc` file in your home directory, or the parent directory of where you are creating projects. 
 ```json
 {
     "generators" : {
         "modules" : {
-            "frontend" : "sails-generate-frontend-angular"
+            "frontend" : "sails-generate-reactjs"
         }
     }
 }
-```
-After this change, when you `sails new <project>` it will use `sails-generate-frontend-angular` by default.
 
-### Production Usage
-
-##### On the command line
-
+1. Install this package globally via NPM, and extends off the SailsJS baseline generator
 ```sh
-$ sails new myApp
+$ npm install -g sails-generate-reactjs
+```
+
+2. This command will create your React Site
+```sh
+$ sails new <%-yourReactAppName> --force
+```
+
+3. Install your app's node modules locally
+```sh
+$ cd <%-yourReactAppName>
+$ npm install
+```
+
+fire up your web app
+```sh
+$ sails lift
+```
+
 ```
 
 ### Roadmap
 * Fix grunt tasks for production
-* Optional angular-classy support
-* Optional Coffeescript support
-
-
-### Development
-
-To get started quickly and see this generator in action, run the `bin/index.js` script:
-
-```sh
-$ git clone YOUR_FORK_OF_THIS_REPO sails-generate-frontend-angular-fork
-$ cd sails-generate-frontend-angular-fork
-$ npm install
-$ node ./bin
-```
-
-`bin/index.js` is a simple script, bundled only for convenience, that runs the generator with hard-coded scope variables.  Please feel free to modify that file however you like!  Also see `CONTRIBUTING.md` for more information on overriding/enhancing generators.
-
-
+* Integrate Mocha and Protractor into this generator for continous integration testing
+* Integrate Kuddo package so you have the option to deploy this app out to an Azure web server
 
 ### Questions?
 

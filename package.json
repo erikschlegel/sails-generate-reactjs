@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-reactjs",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Generate a react JS based frontend for Sails.",
   "main": "lib/index.js",
   "scripts": {
@@ -24,7 +24,6 @@
   "author": "Erik Schlegel",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^3.3.4",
     "grunt": "^0.4.5",
     "lodash": ">=2.4.x",
     "merge-defaults": ">=0.1.0",
