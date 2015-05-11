@@ -14,12 +14,12 @@ var path = require('path')
 // Browserify task work before copying the files in the .tmp folder
 // so the path sould be something like .tmp/public/js/app.js
 // just change assets/ for .tmp/public/ and then the same path as always
-var browserifyMainFile = 'assets/app/app.js';
+var browserifyMainFile = './assets/app/app.js';
 var appRootDir = browserifyMainFile.substring(0, browserifyMainFile.lastIndexOf('/'));
 
 //This is the path which tyhe bablify task will look to for transcompiling ES6->ES5
 var es6To5SrcJSDir     = appRootDir+'/components/es6';
-var es6To5BuildPath    = appRootDir+,'/build/';
+var es6To5BuildPath    = appRootDir+'/build/';
 var packagesToInstall  = ['grunt-shell', 'grunt-react', 'grunt-browserify', 'grunt-babel', 'react-bootstrap', 'react', 'babel'];
 // CSS files to inject in order
 //
@@ -35,14 +35,10 @@ var cssFilesToInject = [
 var jsFilesToInject = [
 
   // Load sails.io before everything else
-  'js/dependencies/sails.io.js',
-
-  // Dependencies like jQuery, or Angular are brought in here
-  'js/dependencies/**/*.js',
-
+  'vendor/sails.io.js/sails.io.js',
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
-  'js/**/*.js'
+  'app/**/*.js'
 ];
 
 
