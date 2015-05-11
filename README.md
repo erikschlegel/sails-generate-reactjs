@@ -2,13 +2,8 @@
 
 # sails-generate-reactjs
 
-
+#### Overview
 A `frontend` ReactJS generator for use with the Sails command-line interface. This bootstraps a full stack site using reactJS / Twitter Bootstrap, and can create/run a web platform in 3 commands. This repo comes bundled with Babel so ES6 components can be used across all browsers. This also ships with Browersify Grunt tasks to wrap all JS dependencies in a single JS file.
-
-
-### Installation
-
-Certain generators are installed by default in Sails, but they can be overridden.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators.
 
 #### Update your .sailsrc file
 You'll need to configure Sails to use this extension for creating new Sails sites. This can be achieved by creating a file named `.sailsrc` file in your home directory, or the parent directory of where you are creating projects. 
@@ -20,7 +15,12 @@ You'll need to configure Sails to use this extension for creating new Sails site
         }
     }
 }
+```
 
+### Installation
+Certain generators are installed by default in Sails, but they can be overridden.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators.
+
+##### On the command line
 1. Install this package globally via NPM, and extends off the SailsJS baseline generator
 ```sh
 $ npm install -g sails-generate-reactjs
@@ -37,7 +37,7 @@ $ cd <%-yourReactAppName>
 $ npm install
 ```
 
-fire up your web app
+4. fire up your web app
 ```sh
 $ sails lift
 ```
@@ -52,8 +52,6 @@ $ sails lift
 ### Questions?
 
 See `FAQ.md`.
-
-
 
 ### More Resources
 
