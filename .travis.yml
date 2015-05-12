@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "0.12"
+sudo: false
+
+before_install:
+  - "export DISPLAY=:99.0"
+  - "npm install -g npm@^2"
+  - "npm install -g sails"
+  - "npm install -g sails-generate-reactjs"
+  - "npm install -g grunt"
+
+install:
+ - "sails new travisSite --force"
+ - "cd travisSite"
+ - "npm install"
+
+script:
+ - "sails lift"
+
+branches:
+  only:
+    - master
+matrix:
+  fast_finish: true
