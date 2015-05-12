@@ -8,9 +8,9 @@ before_install:
   - "npm install -g sails"
   - "npm install -g sails-generate-reactjs"
   - "npm install -g grunt"
+  - "sails new travisSite --force"
 
 install:
- - "sails new travisSite --force"
  - "cd travisSite"
  - "npm install"
 
