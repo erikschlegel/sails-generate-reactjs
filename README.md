@@ -1,6 +1,6 @@
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
-# sails-generate-reactjs
+# sails-generate-reactjs [![Build Status](https://travis-ci.org/erikschlegel/sails-generate-reactjs.svg)](https://travis-ci.org/erikschlegel/sails-generate-reactjs)
 
 #### Overview
 A `frontend` ReactJS generator for use with the Sails command-line interface. This bootstraps a full stack site using reactJS / Twitter Bootstrap, and can create/run a web platform in 3 commands. This repo comes bundled with Babel so ES6 components can be used across all browsers. This also ships with Browersify Grunt tasks to wrap all JS dependencies in a single JS file.
