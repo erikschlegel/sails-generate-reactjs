@@ -7,7 +7,7 @@ before_install:
   - "export DISPLAY=:99.0"
   - "npm install -g sails"
   - "npm install -g sails-generate-reactjs"
-  - sleep 1 # give server time to start
+  - "sleep 10" # give server time to start
   - "npm install -g grunt"
   - "sails new travisSite --force"
 
