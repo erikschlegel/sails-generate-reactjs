@@ -1,9 +1,7 @@
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
-# sails-generate-reactjs [![Build Status](https://travis-ci.org/erikschlegel/sails-generate-reactjs.svg)](https://travis-ci.org/erikschlegel/sails-generate-reactjs)
-
 #### Overview
-A `frontend` ReactJS generator for use with the Sails command-line interface. This bootstraps a full stack site using reactJS / Twitter Bootstrap, and can create/run a web platform in 3 commands. This repo comes bundled with Babel so ES6 components can be used across all browsers. This also ships with Browersify Grunt tasks to wrap all JS dependencies in a single JS file.
+A `frontend` ReactJS generator for use with the Sails command-line interface. This bootstraps a full stack site using reactJS / Twitter Bootstrap, and can create/run a web platform in a few commands. This repo comes bundled with Babel for converting ES6 components into ES5 compatible modules that can run across all browsers. This also ships with Browersify Grunt tasks to wrap all JS dependencies in a single JS file. 
 
 #### Update your .sailsrc file
 You'll need to configure Sails to use this extension for creating new Sails sites. This can be achieved by creating a file named `.sailsrc` in your home directory, or the parent directory of where you are creating projects. 
@@ -41,11 +39,17 @@ $ npm install
 ```sh
 $ sails lift
 ```
+### How to Test
+
+Unit tests are powered by [Mocha](http://mochajs.org/), and are automatically triggered on every Git commit via Travis and whenever your sails site is lifted. A lint task is also invoked on every code commit to verify a succesful build. A Grunt task(<i>called test</i>) runs all Mocha tests within the test folder of the project, while also verifying the site built succefully. You can explicitely run the unit tests by invoking the following command. 
+
+```shell
+$ npm test
+```
 
 ### Roadmap
 * Fix grunt tasks for production
-* Integrate Mocha and Protractor into this generator for continous integration testing
-* Integrate Kuddo package so you have the option to deploy this app out to an Azure web server
+* Integrate Protractor into this generator for front-end control testing, and Istanbul for code coverage reporting
 
 ### Questions?
 
