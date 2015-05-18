@@ -2,23 +2,20 @@ language: node_js
 node_js:
   - "0.12"
 
-before_install:
-  - "npm install -g sails"
-  - "npm install -g sails-generate-reactjs"
-  - "sleep 10" # give server time to start
-  - "npm install -g grunt"
-  - "sails new travisSite --force"
-
-install:
- - "cd travisSite"
- - "npm install"
-
-script:
- - "sails lift"
+before_script:
+  - sudo npm install -g sails
+  - sudo npm install -g sails-generate-reactjs
+  - sudo npm install -g grunt
+  - sudo sails new travisSite --force
+  - cd travisSite
+  - npm install
+  - sudo sails lift
 
 branches:
   only:
     - master
+
+sudo: false
 
 matrix:
   fast_finish: true
