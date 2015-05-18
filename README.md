@@ -41,9 +41,13 @@ $ npm install
 ```sh
 $ sails lift
 ```
+### Verifying a succesful build
+
+This package comes bundled with a starter Travis CI configuration file. You can use Travis CI to run your tests and build your app whenever a Git commit occurs. Getting started with [Travis](https://travis-ci.com/) is as easy as enabling your project on the travis portal, overriding the default .travis.yml config file and committing some code. Travis will automatically run your app's 'npm test' command and handle notifying your team the results of the build. 
+
 ### How to Test
 
-Unit tests are powered by [Mocha](http://mochajs.org/), and are automatically triggered on every Git commit via Travis and whenever your sails site is lifted. A lint task is also invoked on every code commit to verify a succesful build. A Grunt task(<i>called test</i>) runs all Mocha tests within the test folder of the project, while also verifying the site built succefully. You can explicitely run the unit tests by invoking the following command. 
+Unit tests are powered by [Mocha](http://mochajs.org/), and are automatically triggered on every Git commit via Travis and whenever your sails site is lifted. The project comes packaged with [ESLint](http://eslint.org/), which can be easily configured and used to enforce valid javascript syntax and coding standards. A Grunt task(<i>called test</i>) runs all Mocha tests within the test folder of the project, while also verifying the site built succefully. You can explicitely run the unit tests by invoking the following command. 
 
 ```shell
 $ npm test
@@ -64,8 +68,6 @@ See `FAQ.md`.
 - [Twitter](https://twitter.com/sailsjs)
 - [Professional/enterprise](https://github.com/balderdashy/sails-docs/blob/master/FAQ.md#are-there-professional-support-options)
 - [Tutorials](https://github.com/balderdashy/sails-docs/blob/master/FAQ.md#where-do-i-get-help)
-- <a href="http://sailsjs.org" target="_blank" title="Node.js framework for building realtime APIs."><img src="https://github-camo.global.ssl.fastly.net/9e49073459ed4e0e2687b80eaf515d87b0da4a6b/687474703a2f2f62616c64657264617368792e6769746875622e696f2f7361696c732f696d616765732f6c6f676f2e706e67" width=60 alt="Sails.js logo (small)"/></a>
-
 
 ### License
 
