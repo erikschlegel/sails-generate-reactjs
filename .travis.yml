@@ -1,15 +1,13 @@
 language: node_js
 node_js:
   - "0.12"
-sudo: false
 
 before_install:
-  - "export DISPLAY=:99.0"
   - "npm install -g sails"
   - "npm install -g sails-generate-reactjs"
   - "sleep 10" # give server time to start
   - "npm install -g grunt"
-  - "sudo sails new travisSite --force"
+  - "sails new travisSite --force"
 
 install:
  - "cd travisSite"
@@ -21,8 +19,6 @@ script:
 branches:
   only:
     - master
-
-sudo: true
 
 matrix:
   fast_finish: true
