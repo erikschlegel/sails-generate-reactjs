@@ -11,10 +11,10 @@ before_install:
 
 install:
  - "cd travisSite"
- - "sudo npm install"
+ - "npm install"
 
 script:
- - "sudo sails lift"
+ - "sails lift"
 
 branches:
   only:
