@@ -18,7 +18,7 @@ You'll need to configure Sails to use this extension for creating new Sails site
 ```
 
 ### Installation
-Certain generators are installed by default in Sails, but they can be overridden.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators.
+Certain generators are installed by default in Sails, but they can be overridden.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators. Note for Ubuntu environments, you'll need to run all the commands below as sudo(i.e. sudo npm install vs npm install).
 
 ##### On the command line
 *1. Install this package globally via NPM, and extends off the SailsJS baseline generator
@@ -64,7 +64,3 @@ See `FAQ.md`.
 ### License
 
 **[MIT](./LICENSE)**
-&copy; 2014 [balderdashy](http://github.com/balderdashy) & [contributors]
-[Mike McNeil](http://michaelmcneil.com), [Balderdash](http://balderdash.co) & contributors
-
-[Sails](http://sailsjs.org) is free and open-source under the [MIT License](http://sails.mit-license.org/).

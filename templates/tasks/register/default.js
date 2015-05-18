@@ -1,3 +1,3 @@
 module.exports = function (grunt) {
-	grunt.registerTask('default', ['compileAssets', <%- linker ? "'linkAssets', " : '' %> 'watch']);
+	grunt.registerTask('default', ['test', 'compileAssets', <%- linker ? "'linkAssets', " : '' %> 'watch']);
 };
