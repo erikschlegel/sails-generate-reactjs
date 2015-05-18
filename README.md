@@ -1,8 +1,9 @@
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/erikschlegel/sails-generate-reactjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
 #### Overview
 A `frontend` ReactJS generator for use with the Sails command-line interface. This bootstraps a full stack site using reactJS / Twitter Bootstrap, and can create/run a web platform in a few commands. This repo comes bundled with Babel for converting ES6 components into ES5 compatible modules that can run across all browsers. This also ships with Browersify Grunt tasks to wrap all JS dependencies in a single JS file. 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/erikschlegel/sails-generate-reactjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 #### Update your .sailsrc file
 You'll need to configure Sails to use this extension for creating new Sails sites. This can be achieved by creating a file named `.sailsrc` in your home directory, or the parent directory of where you are creating projects. 
