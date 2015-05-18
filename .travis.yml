@@ -9,14 +9,14 @@ before_install:
   - "npm install -g sails-generate-reactjs"
   - "sleep 10" # give server time to start
   - "npm install -g grunt"
-  - "sails new travisSite --force"
+  - "sudo sails new travisSite --force"
 
 install:
  - "cd travisSite"
- - "npm install"
+ - "sudo npm install"
 
 script:
- - "sails lift"
+ - "sudo sails lift"
 
 branches:
   only:
