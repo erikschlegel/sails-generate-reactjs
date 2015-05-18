@@ -5,6 +5,7 @@ node_js:
 before_install:
   - "npm install -g sails"
   - "npm install -g sails-generate-reactjs"
+  - "npm install sails-generate-reactjs"
   - "npm install -g grunt"
   - "sails new travisSite --force"
 
