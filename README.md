@@ -65,7 +65,7 @@ vi ./templates/bower.ejs
 ```
 
 ```sh
-vi /templates/bower.ejs
+vi /templates/package.ejs
 ```
 
 ### Roadmap
