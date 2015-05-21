@@ -41,13 +41,13 @@ $ npm install
 ```sh
 $ sails lift
 ```
-### Verifying a succesful build
+### Verifying a successful build
 
 This package comes bundled with a starter Travis CI configuration file. You can use Travis CI to run your tests and build your app whenever a Git commit occurs. Getting started with [Travis](https://travis-ci.com/) is as easy as enabling your project on the travis portal, overriding the default .travis.yml config file and committing some code. Travis will automatically run your app's 'npm test' command and handle notifying your team the results of the build. 
 
 ### How to Test
 
-Unit tests are powered by [Mocha](http://mochajs.org/), and are automatically triggered on every Git commit via Travis and whenever your sails site is lifted. The project comes packaged with [ESLint](http://eslint.org/), which can be easily configured and used to enforce valid javascript syntax and coding standards. A Grunt task(<i>called test</i>) runs all Mocha tests within the test folder of the project, while also verifying the site built succefully. You can explicitely run the unit tests by invoking the following command. 
+Unit tests are powered by [Mocha](http://mochajs.org/), and are automatically triggered on every Git commit via Travis and whenever your sails site is lifted. The project comes packaged with [ESLint](http://eslint.org/), which can be easily configured and used to enforce valid javascript syntax and coding standards. A Grunt task(<i>called test</i>) runs all Mocha tests within the test folder of the project, while also verifying the site built successfully. You can explicitly run the unit tests by invoking the following command. 
 
 ```shell
 $ npm test
