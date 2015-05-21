@@ -74,7 +74,7 @@ vi /templates/package.ejs
 
 ### Questions?
 
-See `FAQ.md`.
+Post questions/issues onto Gitter and I'll respond as soon as possible.
 
 ### More Resources
 
