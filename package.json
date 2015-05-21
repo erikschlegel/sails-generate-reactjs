@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-reactjs",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "Generate a react JS based frontend for Sails.",
   "main": "lib/index.js",
   "scripts": {
