@@ -20,6 +20,7 @@ var appRootDir = browserifyMainFile.substring(0, browserifyMainFile.lastIndexOf(
 //This is the path which tyhe bablify task will look to for transcompiling ES6->ES5
 var es6To5SrcJSDir     = appRootDir+'/components/es6';
 var es6To5BuildPath    = appRootDir+'/build/';
+var typescriptDirectory = appRootDir+'/components/ts/'
 var packagesToInstall  = ['grunt-shell', 'grunt-react', 'grunt-browserify', 'grunt-babel', 'react-bootstrap', 'react', 'babel'];
 // CSS files to inject in order
 //
@@ -75,3 +76,4 @@ module.exports.es6To5SrcJSDir = es6To5SrcJSDir;
 module.exports.es6To5BuildPath = es6To5BuildPath;
 module.exports.appRootDir = appRootDir;
 module.exports.packagesToInstall = packagesToInstall;
+module.exports.typescriptDir = typescriptDirectory;

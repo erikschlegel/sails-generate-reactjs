@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 	
 	grunt.config.set('clean', {
 		dev: ['.tmp/public/**'],
-		es6Build: [pipeline.es6To5BuildPath+'/**/*.js'],
+		es6Build: [pipeline.es6To5BuildPath+'/**/*.js', pipeline.typescriptDir + 'dist/**/*.ts'],
 		build: ['www']
 	});
 
