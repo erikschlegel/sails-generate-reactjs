@@ -21,7 +21,11 @@ module.exports = function(grunt) {
           dest: '.tmp/public/browserify/debug.' + version + '.js'
         },
         options: {
-          transform: [require('grunt-react').browserify],
+          transform: [
+                        ['babelify', {
+                          loose: 'all'
+                        }]
+                     ],
           basedir: pipeline.appRootDir
         }
   });
