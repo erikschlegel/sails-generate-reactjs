@@ -25,7 +25,7 @@ Certain generators are installed by default in Sails, but they can be overridden
 ##### On the command line
 1. Install this package globally via NPM, and extends off the SailsJS baseline generator
 ```sh
-$ npm install -g sails-generate-reactjs sails grunt-cli
+$ npm install -g sails-generate-reactjs sails grunt-cli babel
 ```
 
 2. This command will create your React Site
