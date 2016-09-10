@@ -11,7 +11,7 @@ You'll need to configure Sails to use this extension for creating new Sails site
 {
     "generators" : {
         "modules" : {
-            "frontend" : "sails-generate-reactjs"
+            "frontend" : "reactjs"
         }
     }
 }
