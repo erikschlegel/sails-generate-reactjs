@@ -32,7 +32,7 @@
   "devDependencies": {
     "sails-generate": "*",
     "sails-generate-controller-angular": "*",
-    "bower": "~1.3.1"
+    "bower": "~1.8.8"
   },
   "sailsGenerator": {
     "type": "frontend",
